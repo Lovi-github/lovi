@@ -1,0 +1,245 @@
+/*美化的分割*/
+#left {
+    float: left;
+    width: 48%;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 2%;
+    position: absolute;
+    top:15%;
+    bottom: 15%;
+}
+
+#right {
+    float: right;
+    width: 48%;
+    height: 100vh;
+    overflow: hidden;
+    margin-right: 2%;
+    position: absolute;
+    right: 0;
+    top:15%;
+    bottom: 15%;
+
+}
+
+
+
+/*整体美化*/
+body {
+    /*background: #def7e7 url("../img/background-img.jpg") no-repeat fixed center;*/
+    background-size: cover;
+    background: linear-gradient(to right, #f97574, #f97574,#1b8ba5,#1b8ba5);
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    /*height: 100%;*/
+    /*margin:0;*/
+
+}
+/*按钮美化*/
+#group-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    background-color: #f97574;
+    /*opacity: 0.5;*/
+    font-size: 16px;
+    color: #fffcfc;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/*表格美化*/
+.tableoOut {
+    margin: 20px auto;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*border-radius: 10px;*/
+    /*box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);*/
+    /*background-color: rgba(222, 247, 231, 0);*/
+    /*background-color: #eaeff0;*/
+}
+
+.tableBox {
+    /*background-color: rgba(222, 247, 231, 0.5);*/
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    /*background-color: #f7f7f7;*/
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    overflow-y: auto;/*滚动条*/
+}
+
+
+.tableTit {
+    /*background: #ffffff;*/
+    background-color: rgba(222, 247, 231, 0.5);
+
+    width: 100%;
+    height: 40px;
+    color: #858A84;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.tableInner {
+    height: auto;
+}
+
+.box {
+    /*background-color: rgba(222, 247, 231, 0.5);*/
+
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    /*background-color: #ffffff;*/
+    /*border-radius: 0 0 10px 10px;*/
+}
+
+
+.box .teamName {
+    color: #858A84;
+}
+
+.tableoOut .schName, .tableoOut .teamName, .tableoOut .no {
+    box-sizing: border-box;
+    padding: 0 5px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tableoOut {
+    width: calc(100% - 10px);
+    flex-shrink: 0;
+}
+
+.schName{
+    width: 40%;
+    flex-shrink: 0;
+}
+.no {
+    width: 15%;
+    flex-shrink: 0;
+}
+.teamName{
+    width: 45%;
+}
+/* 隐藏滚动条 */
+.tableBox::-webkit-scrollbar {
+    display: none;
+}
+
+/* 自定义滚动条样式 */
+.tableBox::-webkit-scrollbar-track {
+    /*background-color: transparent;*/
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    background-color: rgba(222, 247, 231, 0.5);
+
+}
+.leftTableBox::-webkit-scrollbar-track{
+    background-color: #137798;
+}
+
+.tableBox::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+.table-wrap.custom-scrollbar::-webkit-scrollbar-thumb {
+    min-width: 2px;
+}
+
+
+
+/* 鼠标悬停时显示滚动条 */
+.tableBox:hover::-webkit-scrollbar {
+    display: block;
+}
+
+/* 鼠标悬停时显示滚动条的滑块 */
+.tableBox:hover::-webkit-scrollbar-thumb {
+    background-color: #404140;
+    min-width: 2px;
+}
+
+/*颜色*/
+.leftTableOut{
+    /*background-color: #147a94;*/
+    /*background-image: linear-gradient(to bottom right, #147a94, #d5edff);*/
+    /*background-image: linear-gradient(to left, #147a94, transparent 50%, #d5edff);*/
+    /*background-image: linear-gradient(to left, #147a94, #d5edff, #147a94);*/
+    /*background-image: linear-gradient(to left, #d5edff, #147a94, #d5edff);*/
+
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+
+}
+.rightTableOut{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+
+}
+.leftTableTit{
+    background-color: #043c50;
+    color: #fafeff;
+}
+.rightTableTit{
+    /*background-color: #e7c76b;*/
+    background-color: #f97574;
+    /*border: 1px solid red;*/
+    /*background-color: #79b9be;*/
+    color: #fafeff;
+}
+.leftTableBox{
+    background-image: linear-gradient(to bottom right, #147a94, #116cae);
+}
+.rightTableBox{
+    /*background-image: linear-gradient(to bottom right, #147a94, #027ee6);*/
+    background-color: #ffffff;
+
+}
+
+#box11 .box{
+    color: #ffffff;
+
+}
+#box11 .teamName{
+    color: #ffffff;
+}
+#box22 .box{
+    color: #828282;
+    /*border: 1px red solid;*/
+}
+#box22 .teamName{
+    color: #828282;
+}
+

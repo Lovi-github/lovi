@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="gundong.css">
+   </head>
+ <body>
+  <div id="app">
+      <div id="left">
+              <!--整个表tableOut-->
+              <div class="tableoOut leftTableOut" ref="tableoOut" >
+                  <!--表头-->
+                  <div class="tableTit leftTableTit" ref="tableTit">
+                      <div class="no">序号</div>
+                      <div class="schName">学校名称</div>
+                      <div class="teamName">队伍名称</div>
+                  </div>
+                  <!--tableBox表身-->
+                  <div class="tableBox leftTableBox" id="box11" tabindex="0" ref="tableBox"
+                       :style="{height: tableHei}">
+                      <!--滚动的内容！（多列）-->
+                      <div class="tableInner" ref="tableInner" id="leftTableInner">
+                          <div class="box" v-for="(team, teamIndex) in teamsFlat" :key="teamIndex">
+                              <div class="no">{{teamIndex + 1}}</div>
+                              <div class="schName">{{findUniversityByTeam(team)}}</div>
+                              <div class="teamName">{{team}}</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      <div id="right">
+          <!--整个表tableOut-->
+          <div class="tableoOut rightTableOut" ref="tableoOut">
+              <!--表头-->
+              <div class="tableTit rightTableTit" ref="tableTit">
+                  <div class="no">序号</div>
+                  <div class="schName">学校名称</div>
+                  <div class="teamName">队伍名称</div>
+              </div>
+              <!--tableBox表身-->
+              <div class="tableBox rightTableBox" id="box22" tabindex="0" ref="tableBoxRight"
+                   :style="{height: tableHei}">
+                  <!--滚动的内容！（多列）-->
+                  <div class="tableInner" ref="tableInner" id="rightTableInner">
+                      <div class="box" v-for="(team, teamIndex) in teamsFlat" :key="teamIndex">
+                          <div class="no">{{teamIndex + 1}}</div>
+                          <div class="schName">{{findUniversityByTeam(team)}}</div>
+                          <div class="teamName">{{team}}</div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+
+  <div id="team-container"></div>
+  <button id="group-button">Group</button>
+ </body>
+<script src="gundong.js"></script>
+</html>
